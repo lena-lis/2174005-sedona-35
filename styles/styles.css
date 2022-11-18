@@ -185,6 +185,7 @@ a.disabled {
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
+  text-decoration: none;
   text-transform: uppercase;
   color: #ffffff;
   border-radius: 4px;
@@ -371,4 +372,27 @@ a.disabled {
 .features-item-souvenir::before {
   height: 100%;
   background-image: url("../images/icons/present.svg");
+}
+
+/*Поиск гостиницы*/
+
+.hotel-search {
+  box-sizing: border-box;
+  padding: 96px 304px;
+  text-align: center;
+}
+
+.hotel-search-title {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.hotel-search-description {
+  margin-bottom: 54px;
+}
+
+.hotel-search-button {
+  padding: 8px 50px;
+  font-size: 20px;
+  line-height: 36px;
 }
