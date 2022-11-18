@@ -460,9 +460,7 @@ a.disabled {
 
 .field {
   box-sizing: border-box;
-  width: 452px;
-  min-height: 52px;
-  padding-left: 20px;
+
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -485,6 +483,9 @@ a.disabled {
 }
 
 .subscription-form .field {
+  width: 452px;
+  min-height: 52px;
+  padding-left: 20px;
   border-radius: 4px 0 0 4px;
 }
 
@@ -603,6 +604,7 @@ a.disabled {
 
 .modal {
   position: relative;
+  box-sizing: border-box;
   margin: auto;
   padding: 64px 70px;
   background-color: #ffffff;
@@ -636,19 +638,66 @@ a.disabled {
 
 .modal-form {
   display: grid;
-  grid-template-columns: 137px 198px 131px 110px;
+  grid-template-columns: 247px 88px 242px;
+  row-gap: 23px;
 }
 
+.field-group {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 137px 1fr;
+
+  padding: 0;
+
+  border: none;
+}
+
+.field-group-counter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.field-group-adults {
+  grid-column: 1 / 2;
+}
+
+.field-group-children {
+  grid-column: 3 / -1;
+}
+
+
 .field-label {
+  grid-column: 1 / 2;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
 }
 
 .field-group .field {
+  grid-column: 2 / -1;
   font-weight: 700;
+}
+
+.field-message {
+  grid-column: 2 / -1;
+  font-size: 16px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.field-message.invalid {
+  color: #ff5757;
+}
+
+.counter-wrapper {
+  display: flex;
+}
+
+.counter-wrapper .field {
+  width: 31px;
 }
 
 .modal-search-button {
   grid-column: 1 / -1;
+  margin-top: 25px;
 }
