@@ -76,6 +76,7 @@ body {
 
 .logo img {
   display: block;
+  object-fit: contain;
 }
 
 .navigation {
@@ -182,6 +183,7 @@ a.disabled {
 /*Общие стили и состояния кнопок*/
 
 .button {
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -197,6 +199,14 @@ a.disabled {
 
 .button:disabled {
   background-color: #e5e5e5;
+}
+
+.blue-button {
+  background-color: #82b3d3;
+}
+
+.blue-button:hover {
+  background-color: #68a2ca;
 }
 
 .brown-button {
@@ -231,6 +241,7 @@ a.disabled {
 
 .hero img {
   display: block;
+  object-fit: contain;
 }
 
 .hero-image-wrapper {
@@ -273,6 +284,7 @@ a.disabled {
 
 .advantages-item img {
   display: block;
+  object-fit: contain;
 }
 
 .advantages-description-wrapper,
@@ -395,4 +407,64 @@ a.disabled {
   padding: 8px 50px;
   font-size: 20px;
   line-height: 36px;
+}
+
+/*Подписка*/
+
+.subscription {
+  padding: 96px 258px 104px;
+  text-align: center;
+  background-image: url("../images/subscription-background.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.subscription-title {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.subscription-description {
+  margin-bottom: 54px;
+  color: #ffffff;
+}
+
+.subscription-form {
+  display: flex;
+  justify-content: center;
+}
+
+.field {
+  box-sizing: border-box;
+  width: 452px;
+  min-height: 52px;
+  padding-left: 20px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.field:hover {
+  background-color: #e6e6e6;
+}
+
+.field:active {
+  outline: 2px solid #000000;
+}
+
+.field:focus-visible {
+  background-color: #e6e6e6;
+  outline: 3px solid #82b3d3;
+}
+
+.subscription-button {
+  padding: 8px 50px;
+  font-size: 20px;
+  line-height: 36px;
+  border: none;
+  border-radius: 0 4px 4px 0;
 }
