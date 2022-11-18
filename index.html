@@ -202,6 +202,43 @@
         </button>
         <section class="modal-content">
           <h2 class="modal-title section-title">Поиск гостиницы в Седоне</h2>
+          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="field-group">
+              <label for="date-in">Дата заезда:</label>
+              <input class="field" type="text" name="date-in" id="date-in" placeholder="27 апреля 2020" required>
+              <span class="date-in-invalid">Мы не можем отправить вас в прошлое.</span>
+            </p>
+            <p class="field-group">
+              <label for="date-out">Дата выезда:</label>
+              <input class="field" type="text" name="date-out" id="date-out" placeholder="1 сентября 2023" required>
+              <span class="date-out-valid">На эти даты есть свободные номера. Пока есть.</span>
+            </p>
+            <p class="field-group">
+              <label for="adults-counter">Взрослые:</label>
+            <div class="counter-wrapper">
+              <button class="minus-button" type="button"></button>
+              <input class="field" type="number" name="adults" id="adults-counter" placeholder="2" required>
+              <button class="plus-button" type="button"></button>
+            </div>
+            </p>
+            <p class="field-group">
+              <label for="children-counter">Дети:</label>
+              <!--<span class="tooltip">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                  <svg class="tooltip-icon" aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.0003 2.125c-2.6926 0-4.8753 2.1828-4.8753 4.8753 0 2.6925 2.1827 4.8753 4.8753 4.8753 2.6925 0 4.8752-2.1828 4.8752-4.8753 0-2.6925-2.1827-4.8752-4.8752-4.8752ZM.7917 7.0004c0-3.4289 2.7797-6.2086 6.2086-6.2086 3.4289 0 6.2085 2.7797 6.2085 6.2086 0 3.4289-2.7796 6.2086-6.2085 6.2086-3.429 0-6.2086-2.7797-6.2086-6.2086ZM7 6.3334a.6667.6667 0 0 1 .6666.6667v2.2167a.6667.6667 0 0 1-1.3333 0V7.0001a.6667.6667 0 0 1 .6667-.6667Zm0-2.2168A.6667.6667 0 0 0 7 5.45h.0058a.6667.6667 0 0 0 0-1.3334h-.0058Z"/>
+                  </svg>
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label-children">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              </span>-->
+            <div class="counter-wrapper">
+              <button class="minus-button" type="button"></button>
+              <input class="field" type="number" name="children" id="children-counter" placeholder="2" required>
+              <button class="plus-button" type="button"></button>
+            </div>
+            </p>
+            <button class="modal-search-button blue-button button" type="submit">Найти</button>
+          </form>
         </section>
       </div>
     </div>
