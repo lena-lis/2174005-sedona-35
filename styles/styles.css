@@ -707,6 +707,15 @@ a.disabled {
 
 .counter-wrapper .field {
   width: 31px;
+  border-radius: 0;
+}
+
+.minus-button,
+.plus-button {
+  width: 40px;
+  min-height: 48px;
+  background-color: #f2f2f2;
+  border: none;
 }
 
 .modal-search-button {
