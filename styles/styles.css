@@ -646,7 +646,8 @@ a.disabled {
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 137px 1fr;
-
+  align-items: center;
+  min-height: 73px;
   padding: 0;
 
   border: none;
@@ -655,6 +656,7 @@ a.disabled {
 .field-group-counter {
   display: flex;
   justify-content: space-between;
+  min-height: 48px;
 }
 
 .field-group-adults {
@@ -675,7 +677,17 @@ a.disabled {
 
 .field-group .field {
   grid-column: 2 / -1;
+  min-height: 48px;
+  padding: 0;
+  padding-left: 20px;
   font-weight: 700;
+}
+
+.field-group:not(.field-group-counter) .field {
+  background-image: url("../images/icons/calendar.svg");
+  background-position: 400px 14px;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
 }
 
 .field-message {
