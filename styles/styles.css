@@ -636,6 +636,21 @@ a.disabled {
   cursor: pointer;
 }
 
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:active {
+  background-color: #e5e5e5;
+
+  opacity: 0.3;
+}
+
+.modal-close-button:focus-visible {
+  background-color: #e6e6e6;
+  outline: 3px solid #82b3d3;
+}
+
 .modal-form {
   display: grid;
   grid-template-columns: 247px 88px 242px;
@@ -669,6 +684,7 @@ a.disabled {
 
 
 .field-label {
+  position: relative;
   grid-column: 1 / 2;
   font-size: 20px;
   line-height: 24px;
@@ -707,18 +723,127 @@ a.disabled {
 
 .counter-wrapper .field {
   width: 31px;
+  min-height: 48px;
+  padding: 14px 10px;
   border-radius: 0;
 }
 
-.minus-button,
-.plus-button {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+.counter-button {
+  position: relative;
+  box-sizing: border-box;
   width: 40px;
   min-height: 48px;
+  padding: 14px 10px;
+  color: rgba(0, 0, 0, 0.3);
   background-color: #f2f2f2;
   border: none;
+}
+
+.counter-button:hover {
+  color: #000000;
+}
+
+.counter-button:active {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.counter-button:focus-visible {
+  color: #000000;
+  outline: 3px solid #82b3d3;
+}
+
+.minus-button {
+  border-radius: 4px 0 0 4px;
+}
+
+.plus-button {
+  border-radius: 0 4px 4px 0;
+}
+
+.counter-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
 
 .modal-search-button {
   grid-column: 1 / -1;
   margin-top: 25px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+
+  font-size: 20px;
+  line-height: 24px;
+  border: none;
+}
+
+/*Тултип модального окна*/
+
+.tooltip {
+  position: absolute;
+
+  margin-left: 10px;
+  width: 26px;
+  height: 26px;
+}
+
+.tooltip-toggle {
+  position: relative;
+  display: block;
+  width: 26px;
+  height: 26px;
+  margin: 0;
+  padding: 0;
+  background-color: #82b3d3;
+  border: none;
+  border-radius: 50%;
+}
+
+.tooltip-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+
+  color: #ffffff;
+}
+
+.tooltip-toggle:hover .tooltip-icon {
+  opacity: 0.7;
+}
+
+.tooltip-text {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 13px;
+
+  display: block;
+  width: 256px;
+  padding: 18px 20px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #333333;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+
+  z-index: 1;
 }
