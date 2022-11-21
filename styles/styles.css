@@ -602,6 +602,10 @@ a.disabled {
   z-index: 20;
 }
 
+.modal-container-close {
+  display: none;
+}
+
 .modal {
   position: relative;
   box-sizing: border-box;
